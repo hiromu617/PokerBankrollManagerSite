@@ -27,13 +27,13 @@ export default function Home() {
       {/* Hero */}
       <section className="flex flex-col items-center justify-center gap-6 px-4 py-24 text-center">
         <img
-          src="/appicon_clear.png"
+          src="/appicon.png"
           alt="Poker Bankroll Manager"
-          width={180}
-          height={180}
-          className="rounded-[40px]"
+          width={120}
+          height={120}
+          className="rounded-[30px] shadow-2xl shadow-black/50 ring-1 ring-white/10"
         />
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mt-4">
           Poker Bankroll Manager
         </h1>
         <p className="max-w-md text-lg text-zinc-400">
