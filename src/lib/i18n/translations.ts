@@ -12,8 +12,8 @@ export type Translations = {
     sessionRecording: FeatureEntry;
     bankrollManagement: FeatureEntry;
     detailedAnalysis: FeatureEntry;
-    liveTracking: FeatureEntry;
     multiCurrency: FeatureEntry;
+    customCurrency: FeatureEntry;
     dataExport: FeatureEntry;
   };
   screenshots: {
@@ -46,13 +46,13 @@ const translations: Record<Language, Translations> = {
         title: "詳細な分析",
         description: "ステークス別・場所別・期間別の損益分析で戦略を改善",
       },
-      liveTracking: {
-        title: "ライブトラッキング",
-        description: "スタック推移をリアルタイムで記録・チャート化",
-      },
       multiCurrency: {
         title: "マルチ通貨対応",
         description: "USD、JPY、EURなど16以上の通貨に対応",
+      },
+      customCurrency: {
+        title: "カスタム通貨",
+        description: "アミューズメント店舗のポイントなど独自の通貨単位を作成・記録可能",
       },
       dataExport: {
         title: "データエクスポート",
@@ -94,13 +94,13 @@ const translations: Record<Language, Translations> = {
         description:
           "Improve your strategy with P&L breakdowns by stakes, venue, and period.",
       },
-      liveTracking: {
-        title: "Live Tracking",
-        description: "Track and chart your stack changes in real time.",
-      },
       multiCurrency: {
         title: "Multi-Currency",
         description: "Supports 16+ currencies including USD, JPY, and EUR.",
+      },
+      customCurrency: {
+        title: "Custom Currency",
+        description: "Create custom currency units to track amusement venue points and more.",
       },
       dataExport: {
         title: "Data Export",
