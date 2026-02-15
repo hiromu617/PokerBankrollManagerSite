@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Poker Bankroll Manager",
-  description: "Poker Bankroll Manager",
+  title: "Poker Bankroll Manager - ポーカー収支管理アプリ",
+  description:
+    "ポーカーセッションの収支を記録・分析するiOSアプリ。バンクロール推移、損益チャート、時給計算など。",
 };
 
 export default function RootLayout({
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ja">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
