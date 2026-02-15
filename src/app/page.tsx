@@ -14,13 +14,13 @@ const featureKeys = [
 ] as const;
 
 const screenshots = [
-  { src: "/screenshot1.png", key: "dashboard" as const },
-  { src: "/screenshot2.png", key: "analysis" as const },
-  { src: "/screenshot3.png", key: "liveSession" as const },
+  { src: "/screenshot1.png", srcEn: "/screenshot1_en.png", key: "dashboard" as const },
+  { src: "/screenshot2.png", srcEn: "/screenshot2_en.png", key: "analysis" as const },
+  { src: "/screenshot3.png", srcEn: "/screenshot3_en.png", key: "liveSession" as const },
 ];
 
 export default function Home() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <div className="min-h-screen">
@@ -61,7 +61,7 @@ export default function Home() {
           {screenshots.map((s) => (
             <div key={s.src} className="w-[260px] flex-shrink-0 snap-center">
               <img
-                src={s.src}
+                src={language === "en" ? s.srcEn : s.src}
                 alt={t.screenshots[s.key]}
                 className="w-full rounded-2xl border border-zinc-800 shadow-lg shadow-black/30"
               />
