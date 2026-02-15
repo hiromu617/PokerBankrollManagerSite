@@ -114,10 +114,10 @@ export default function Home() {
       {/* Footer */}
       <footer className="border-t border-zinc-800 px-4 py-8 text-center text-sm text-zinc-500">
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
-          <a href="#" className="hover:text-zinc-300 transition">
+          <a href="/privacy-policy" className="hover:text-zinc-300 transition">
             プライバシーポリシー
           </a>
-          <a href="#" className="hover:text-zinc-300 transition">
+          <a href="/terms-of-service" className="hover:text-zinc-300 transition">
             利用規約
           </a>
         </div>
