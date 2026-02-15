@@ -1,44 +1,27 @@
-const features = [
-  {
-    title: "セッション記録",
-    description:
-      "リアルタイムでポーカーセッションの収支を記録。キャッシュゲーム・MTT対応",
-    icon: "📝",
-  },
-  {
-    title: "バンクロール管理",
-    description: "複数通貨でのバンクロール推移をチャートで可視化",
-    icon: "📊",
-  },
-  {
-    title: "詳細な分析",
-    description: "ステークス別・場所別・期間別の損益分析で戦略を改善",
-    icon: "🔍",
-  },
-  {
-    title: "ライブトラッキング",
-    description: "スタック推移をリアルタイムで記録・チャート化",
-    icon: "⏱️",
-  },
-  {
-    title: "マルチ通貨対応",
-    description: "USD、JPY、EURなど16以上の通貨に対応",
-    icon: "💱",
-  },
-  {
-    title: "データエクスポート",
-    description: "CSV出力で外部ツールとの連携も可能",
-    icon: "📤",
-  },
-];
+"use client";
+
+import { useLanguage } from "@/lib/i18n/context";
+
+const featureIcons = ["📝", "📊", "🔍", "⏱️", "💱", "📤"];
+
+const featureKeys = [
+  "sessionRecording",
+  "bankrollManagement",
+  "detailedAnalysis",
+  "liveTracking",
+  "multiCurrency",
+  "dataExport",
+] as const;
 
 const screenshots = [
-  { src: "/screenshot1.png", caption: "ダッシュボード（バンクロール推移）" },
-  { src: "/screenshot2.png", caption: "分析画面（損益チャート）" },
-  { src: "/screenshot3.png", caption: "ライブセッション記録" },
+  { src: "/screenshot1.png", key: "dashboard" as const },
+  { src: "/screenshot2.png", key: "analysis" as const },
+  { src: "/screenshot3.png", key: "liveSession" as const },
 ];
 
 export default function Home() {
+  const { t } = useLanguage();
+
   return (
     <div className="min-h-screen">
       {/* Hero */}
@@ -54,7 +37,7 @@ export default function Home() {
           Poker Bankroll Manager
         </h1>
         <p className="max-w-md text-lg text-zinc-400">
-          ポーカーの収支を記録・分析するiOSアプリ
+          {t.hero.subtitle}
         </p>
         <a
           href="#"
@@ -68,7 +51,7 @@ export default function Home() {
           >
             <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
           </svg>
-          App Storeからダウンロード
+          {t.hero.download}
         </a>
       </section>
 
@@ -79,11 +62,11 @@ export default function Home() {
             <div key={s.src} className="w-[260px] flex-shrink-0 snap-center">
               <img
                 src={s.src}
-                alt={s.caption}
+                alt={t.screenshots[s.key]}
                 className="w-full rounded-2xl border border-zinc-800 shadow-lg shadow-black/30"
               />
               <p className="mt-3 text-center text-sm text-zinc-400">
-                {s.caption}
+                {t.screenshots[s.key]}
               </p>
             </div>
           ))}
@@ -93,18 +76,20 @@ export default function Home() {
       {/* Features */}
       <section className="px-4 py-16">
         <h2 className="mb-10 text-center text-2xl font-bold sm:text-3xl">
-          機能紹介
+          {t.features.heading}
         </h2>
         <div className="mx-auto grid max-w-4xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f) => (
+          {featureKeys.map((key, i) => (
             <div
-              key={f.title}
+              key={key}
               className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6"
             >
-              <div className="mb-3 text-3xl">{f.icon}</div>
-              <h3 className="mb-1 text-lg font-semibold">{f.title}</h3>
+              <div className="mb-3 text-3xl">{featureIcons[i]}</div>
+              <h3 className="mb-1 text-lg font-semibold">
+                {t.features[key].title}
+              </h3>
               <p className="text-sm leading-relaxed text-zinc-400">
-                {f.description}
+                {t.features[key].description}
               </p>
             </div>
           ))}
@@ -115,10 +100,10 @@ export default function Home() {
       <footer className="border-t border-zinc-800 px-4 py-8 text-center text-sm text-zinc-500">
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
           <a href="/privacy-policy" className="hover:text-zinc-300 transition">
-            プライバシーポリシー
+            {t.footer.privacyPolicy}
           </a>
           <a href="/terms-of-service" className="hover:text-zinc-300 transition">
-            利用規約
+            {t.footer.termsOfService}
           </a>
         </div>
         <p className="mt-4">&copy; 2025 Poker Bankroll Manager</p>

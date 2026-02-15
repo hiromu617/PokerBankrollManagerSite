@@ -1,8 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
-import Markdown from "react-markdown";
-import Link from "next/link";
+import MarkdownContent from "@/components/MarkdownContent";
 
 export const metadata: Metadata = {
   title: "利用規約 - Poker Bankroll Manager",
@@ -10,20 +9,14 @@ export const metadata: Metadata = {
 };
 
 export default function TermsOfServicePage() {
-  const filePath = path.join(process.cwd(), "content", "terms-of-service.md");
-  const content = fs.readFileSync(filePath, "utf-8");
-
-  return (
-    <div className="mx-auto max-w-3xl px-4 py-16">
-      <Link
-        href="/"
-        className="mb-8 inline-flex items-center gap-1 text-sm text-zinc-400 transition hover:text-zinc-200"
-      >
-        &larr; ホームに戻る
-      </Link>
-      <article className="prose prose-invert prose-zinc max-w-none">
-        <Markdown>{content}</Markdown>
-      </article>
-    </div>
+  const contentJa = fs.readFileSync(
+    path.join(process.cwd(), "content", "terms-of-service.md"),
+    "utf-8"
   );
+  const contentEn = fs.readFileSync(
+    path.join(process.cwd(), "content", "terms-of-service.en.md"),
+    "utf-8"
+  );
+
+  return <MarkdownContent contentJa={contentJa} contentEn={contentEn} />;
 }
