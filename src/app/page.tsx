@@ -106,7 +106,7 @@ export default function Home() {
             {t.footer.termsOfService}
           </a>
         </div>
-        <p className="mt-4">&copy; 2025 Poker Bankroll Manager</p>
+        <p className="mt-4">&copy; 2026 Poker Bankroll Manager</p>
       </footer>
     </div>
   );
