@@ -40,7 +40,9 @@ export default function Home() {
           {t.hero.subtitle}
         </p>
         <a
-          href="#"
+          href="https://apps.apple.com/us/app/poker-bankroll-manager/id6758828195"
+          target="_blank"
+          rel="noopener noreferrer"
           className="mt-2 inline-flex items-center gap-2 rounded-xl bg-white px-6 py-3 text-sm font-semibold text-black transition hover:bg-zinc-200"
         >
           <svg

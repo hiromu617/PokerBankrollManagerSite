@@ -29,7 +29,7 @@ const translations: Record<Language, Translations> = {
   ja: {
     hero: {
       subtitle: "ポーカーの収支をスマートに管理",
-      download: "近日公開予定",
+      download: "App Storeでダウンロード",
     },
     features: {
       heading: "機能",
@@ -75,7 +75,7 @@ const translations: Record<Language, Translations> = {
   en: {
     hero: {
       subtitle: "Smart bankroll management for poker",
-      download: "Coming Soon",
+      download: "Download on the App Store",
     },
     features: {
       heading: "Features",
