@@ -30,7 +30,7 @@ export default function Home() {
   const doubledScreenshots = [...screenshots, ...screenshots];
 
   const onUserScroll = useCallback(() => {
-    pausedUntil.current = Date.now() + 3000;
+    pausedUntil.current = Date.now() + 100;
   }, []);
 
   useEffect(() => {
