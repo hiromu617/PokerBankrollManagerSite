@@ -20,6 +20,8 @@ export type Translations = {
     dashboard: string;
     analysis: string;
     liveSession: string;
+    bankroll: string;
+    handHistory: string;
   };
   footer: { privacyPolicy: string; termsOfService: string };
   legal: { backToHome: string };
@@ -61,8 +63,10 @@ const translations: Record<Language, Translations> = {
     },
     screenshots: {
       dashboard: "ダッシュボード（バンクロール推移）",
-      analysis: "分析画面（損益チャート）",
+      analysis: "分析画面（カレンダー）",
       liveSession: "ライブセッション記録",
+      bankroll: "バンクロール詳細（出金管理）",
+      handHistory: "ハンド記録",
     },
     footer: {
       privacyPolicy: "プライバシーポリシー",
@@ -110,8 +114,10 @@ const translations: Record<Language, Translations> = {
     },
     screenshots: {
       dashboard: "Dashboard (Bankroll Trend)",
-      analysis: "Analysis (P&L Chart)",
+      analysis: "Analytics (Calendar)",
       liveSession: "Live Session Recording",
+      bankroll: "Bankroll Detail (Withdrawals)",
+      handHistory: "Hand History",
     },
     footer: {
       privacyPolicy: "Privacy Policy",

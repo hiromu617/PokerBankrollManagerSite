@@ -14,9 +14,11 @@ const featureKeys = [
 ] as const;
 
 const screenshots = [
-  { src: "/screenshot1.png", srcEn: "/screenshot1_en.png", key: "dashboard" as const },
-  { src: "/screenshot2.png", srcEn: "/screenshot2_en.png", key: "analysis" as const },
-  { src: "/screenshot3.png", srcEn: "/screenshot3_en.png", key: "liveSession" as const },
+  { file: "screenshot1.png", key: "dashboard" as const },
+  { file: "screenshot2.png", key: "analysis" as const },
+  { file: "screenshot3.png", key: "liveSession" as const },
+  { file: "screenshot4.png", key: "bankroll" as const },
+  { file: "screenshot5.png", key: "handHistory" as const },
 ];
 
 export default function Home() {
@@ -61,9 +63,9 @@ export default function Home() {
       <section className="py-16">
         <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-[calc(50vw-130px)] pb-6 sm:px-[calc(50vw-400px)]">
           {screenshots.map((s) => (
-            <div key={s.src} className="w-[260px] flex-shrink-0 snap-center">
+            <div key={s.file} className="w-[260px] flex-shrink-0 snap-center">
               <img
-                src={language === "en" ? s.srcEn : s.src}
+                src={`/screenshots/${language}/${s.file}`}
                 alt={t.screenshots[s.key]}
                 className="w-full rounded-2xl border border-zinc-800 shadow-lg shadow-black/30"
               />
