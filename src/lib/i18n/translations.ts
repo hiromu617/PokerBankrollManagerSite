@@ -1,4 +1,4 @@
-export type Language = "ja" | "en";
+export type Language = "ja" | "en" | "fr" | "es" | "de";
 
 type FeatureEntry = {
   title: string;
@@ -125,6 +125,159 @@ const translations: Record<Language, Translations> = {
     },
     legal: {
       backToHome: "Back to Home",
+    },
+  },
+  fr: {
+    hero: {
+      subtitle: "Gestion intelligente de votre bankroll poker",
+      download: "Télécharger sur l'App Store",
+    },
+    features: {
+      heading: "Fonctionnalités",
+      sessionRecording: {
+        title: "Enregistrement de session",
+        description:
+          "Enregistrez vos résultats de session en temps réel. Cash games et MTT pris en charge.",
+      },
+      bankrollManagement: {
+        title: "Gestion de bankroll",
+        description:
+          "Visualisez l'évolution de votre bankroll en plusieurs devises avec des graphiques.",
+      },
+      detailedAnalysis: {
+        title: "Analyse détaillée",
+        description:
+          "Améliorez votre stratégie avec des analyses par enjeux, lieu et période.",
+      },
+      handHistory: {
+        title: "Historique des mains",
+        description: "Enregistrez les mains clés pendant vos sessions. Sauvegardez les actions du preflop à la river.",
+      },
+      tripManagement: {
+        title: "Gestion de voyages (Pro)",
+        description: "Suivez les gains et dépenses par voyage ou série de tournois.",
+      },
+      dataExport: {
+        title: "Export de données",
+        description:
+          "Exportez en CSV pour une intégration avec des outils externes.",
+      },
+    },
+    screenshots: {
+      dashboard: "Tableau de bord (Évolution du bankroll)",
+      analysis: "Analyse (Calendrier)",
+      liveSession: "Session en direct",
+      bankroll: "Détail du bankroll (Retraits)",
+      handHistory: "Historique des mains",
+    },
+    footer: {
+      privacyPolicy: "Politique de confidentialité",
+      termsOfService: "Conditions d'utilisation",
+    },
+    legal: {
+      backToHome: "Retour à l'accueil",
+    },
+  },
+  es: {
+    hero: {
+      subtitle: "Gestión inteligente de tu bankroll de póker",
+      download: "Descargar en la App Store",
+    },
+    features: {
+      heading: "Características",
+      sessionRecording: {
+        title: "Registro de sesiones",
+        description:
+          "Registra los resultados de tus sesiones en tiempo real. Compatible con cash games y MTT.",
+      },
+      bankrollManagement: {
+        title: "Gestión de bankroll",
+        description:
+          "Visualiza la evolución de tu bankroll en múltiples divisas con gráficos.",
+      },
+      detailedAnalysis: {
+        title: "Análisis detallado",
+        description:
+          "Mejora tu estrategia con análisis por stakes, lugar y período.",
+      },
+      handHistory: {
+        title: "Historial de manos",
+        description: "Registra las manos clave durante tus sesiones. Guarda las acciones desde el preflop hasta el river.",
+      },
+      tripManagement: {
+        title: "Gestión de viajes (Pro)",
+        description: "Controla ganancias y gastos por viaje o serie de torneos.",
+      },
+      dataExport: {
+        title: "Exportación de datos",
+        description:
+          "Exporta a CSV para integración con herramientas externas.",
+      },
+    },
+    screenshots: {
+      dashboard: "Panel principal (Tendencia del bankroll)",
+      analysis: "Análisis (Calendario)",
+      liveSession: "Sesión en vivo",
+      bankroll: "Detalle del bankroll (Retiros)",
+      handHistory: "Historial de manos",
+    },
+    footer: {
+      privacyPolicy: "Política de privacidad",
+      termsOfService: "Términos de servicio",
+    },
+    legal: {
+      backToHome: "Volver al inicio",
+    },
+  },
+  de: {
+    hero: {
+      subtitle: "Intelligentes Bankroll-Management für Poker",
+      download: "Im App Store herunterladen",
+    },
+    features: {
+      heading: "Funktionen",
+      sessionRecording: {
+        title: "Sitzungsaufzeichnung",
+        description:
+          "Erfasse Poker-Sitzungsergebnisse in Echtzeit. Unterstützt Cash Games und MTT.",
+      },
+      bankrollManagement: {
+        title: "Bankroll-Verwaltung",
+        description:
+          "Visualisiere Bankroll-Trends in mehreren Währungen mit Diagrammen.",
+      },
+      detailedAnalysis: {
+        title: "Detaillierte Analyse",
+        description:
+          "Verbessere deine Strategie mit Gewinn- und Verlustanalysen nach Stakes, Ort und Zeitraum.",
+      },
+      handHistory: {
+        title: "Hand-Verlauf",
+        description: "Zeichne wichtige Hände während der Sitzungen auf. Speichere Aktionen vom Preflop bis zum River.",
+      },
+      tripManagement: {
+        title: "Reiseverwaltung (Pro)",
+        description: "Verfolge Gewinne und Ausgaben pro Reise oder Turnierserie.",
+      },
+      dataExport: {
+        title: "Datenexport",
+        description:
+          "Exportiere als CSV zur Integration mit externen Tools.",
+      },
+    },
+    screenshots: {
+      dashboard: "Dashboard (Bankroll-Verlauf)",
+      analysis: "Analyse (Kalender)",
+      liveSession: "Live-Sitzungsaufzeichnung",
+      bankroll: "Bankroll-Details (Auszahlungen)",
+      handHistory: "Hand-Verlauf",
+    },
+    footer: {
+      privacyPolicy: "Datenschutzrichtlinie",
+      termsOfService: "Nutzungsbedingungen",
+    },
+    legal: {
+      backToHome: "Zurück zur Startseite",
     },
   },
 };

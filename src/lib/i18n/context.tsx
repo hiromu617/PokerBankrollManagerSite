@@ -9,6 +9,8 @@ import {
 } from "react";
 import { type Language, type Translations, getTranslations } from "./translations";
 
+const LANGUAGES: Language[] = ["ja", "en", "fr", "es", "de"];
+
 type LanguageContextValue = {
   language: Language;
   setLanguage: (lang: Language) => void;
@@ -17,20 +19,25 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
+function isLanguage(value: string): value is Language {
+  return LANGUAGES.includes(value as Language);
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("ja");
+  const [language, setLanguageState] = useState<Language>("en");
 
   useEffect(() => {
     const saved = localStorage.getItem("language");
-    if (saved === "ja" || saved === "en") {
+    if (saved && isLanguage(saved)) {
       setLanguageState(saved);
       document.documentElement.lang = saved;
       return;
     }
     const browserLang = navigator.language;
-    if (browserLang.startsWith("en")) {
-      setLanguageState("en");
-      document.documentElement.lang = "en";
+    const prefix = browserLang.split("-")[0];
+    if (isLanguage(prefix)) {
+      setLanguageState(prefix);
+      document.documentElement.lang = prefix;
     }
   }, []);
 
