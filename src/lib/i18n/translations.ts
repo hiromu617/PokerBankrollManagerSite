@@ -12,8 +12,8 @@ export type Translations = {
     sessionRecording: FeatureEntry;
     bankrollManagement: FeatureEntry;
     detailedAnalysis: FeatureEntry;
-    multiCurrency: FeatureEntry;
-    customCurrency: FeatureEntry;
+    handHistory: FeatureEntry;
+    tripManagement: FeatureEntry;
     dataExport: FeatureEntry;
   };
   screenshots: {
@@ -48,13 +48,13 @@ const translations: Record<Language, Translations> = {
         title: "詳細な分析",
         description: "ステークス別・場所別・期間別の損益分析で戦略を改善",
       },
-      multiCurrency: {
-        title: "マルチ通貨対応",
-        description: "USD、JPY、EURなど16以上の通貨に対応",
+      handHistory: {
+        title: "ハンド記録",
+        description: "セッション中の重要なハンドを記録。プリフロップからリバーまでのアクションを保存",
       },
-      customCurrency: {
-        title: "カスタム通貨",
-        description: "アミューズメント店舗のポイントなど独自の通貨単位を作成・記録可能",
+      tripManagement: {
+        title: "トリップ管理（Pro）",
+        description: "遠征やトーナメントシリーズ単位で収支・経費をまとめて管理",
       },
       dataExport: {
         title: "データエクスポート",
@@ -98,13 +98,13 @@ const translations: Record<Language, Translations> = {
         description:
           "Improve your strategy with P&L breakdowns by stakes, venue, and period.",
       },
-      multiCurrency: {
-        title: "Multi-Currency",
-        description: "Supports 16+ currencies including USD, JPY, and EUR.",
+      handHistory: {
+        title: "Hand History",
+        description: "Record key hands during sessions. Save actions from preflop through river.",
       },
-      customCurrency: {
-        title: "Custom Currency",
-        description: "Create custom currency units to track amusement venue points and more.",
+      tripManagement: {
+        title: "Trip Management (Pro)",
+        description: "Track profit and expenses per trip or tournament series in one place.",
       },
       dataExport: {
         title: "Data Export",

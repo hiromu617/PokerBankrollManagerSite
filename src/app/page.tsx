@@ -2,14 +2,14 @@
 
 import { useLanguage } from "@/lib/i18n/context";
 
-const featureIcons = ["📝", "📊", "🔍", "💱", "🪙", "📤"];
+const featureIcons = ["📝", "📊", "🔍", "🃏", "✈️", "📤"];
 
 const featureKeys = [
   "sessionRecording",
   "bankrollManagement",
   "detailedAnalysis",
-  "multiCurrency",
-  "customCurrency",
+  "handHistory",
+  "tripManagement",
   "dataExport",
 ] as const;
 
