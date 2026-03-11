@@ -1,7 +1,6 @@
 "use client";
 
 import { useLanguage } from "@/lib/i18n/context";
-
 const featureIcons = ["📝", "📊", "🔍", "🃏", "✈️", "📤"];
 
 const featureKeys = [
@@ -23,6 +22,8 @@ const screenshots = [
 
 export default function Home() {
   const { language, t } = useLanguage();
+
+  const doubledScreenshots = [...screenshots, ...screenshots];
 
   return (
     <div className="min-h-screen">
@@ -60,10 +61,10 @@ export default function Home() {
       </section>
 
       {/* Screenshots */}
-      <section className="py-16">
-        <div className="flex snap-x snap-mandatory gap-6 overflow-x-auto px-[calc(50vw-130px)] pb-6 sm:px-[calc(50vw-400px)]">
-          {screenshots.map((s) => (
-            <div key={s.file} className="w-[260px] flex-shrink-0 snap-center">
+      <section className="py-16 overflow-hidden">
+        <div className="flex w-max animate-scroll gap-6 hover:[animation-play-state:paused]">
+          {doubledScreenshots.map((s, i) => (
+            <div key={`${s.file}-${i}`} className="w-[260px] flex-shrink-0">
               <img
                 src={`/screenshots/${language}/${s.file}`}
                 alt={t.screenshots[s.key]}
