@@ -1,6 +1,8 @@
 "use client";
 
 import { useLanguage } from "@/lib/i18n/context";
+import { useEffect, useRef, useCallback } from "react";
+
 const featureIcons = ["📝", "📊", "🔍", "🃏", "✈️", "📤"];
 
 const featureKeys = [
@@ -22,8 +24,44 @@ const screenshots = [
 
 export default function Home() {
   const { language, t } = useLanguage();
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const pausedUntil = useRef(0);
 
   const doubledScreenshots = [...screenshots, ...screenshots];
+
+  const onUserScroll = useCallback(() => {
+    pausedUntil.current = Date.now() + 3000;
+  }, []);
+
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+
+    let raf: number;
+    const speed = 0.5; // px per frame
+
+    const step = () => {
+      if (Date.now() > pausedUntil.current) {
+        el.scrollLeft += speed;
+        // loop: when first half is scrolled past, jump back
+        const half = el.scrollWidth / 2;
+        if (el.scrollLeft >= half) {
+          el.scrollLeft -= half;
+        }
+      }
+      raf = requestAnimationFrame(step);
+    };
+
+    raf = requestAnimationFrame(step);
+    el.addEventListener("pointerdown", onUserScroll);
+    el.addEventListener("wheel", onUserScroll, { passive: true });
+
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("pointerdown", onUserScroll);
+      el.removeEventListener("wheel", onUserScroll);
+    };
+  }, [onUserScroll]);
 
   return (
     <div className="min-h-screen">
@@ -61,8 +99,8 @@ export default function Home() {
       </section>
 
       {/* Screenshots */}
-      <section className="py-16 overflow-hidden">
-        <div className="flex w-max animate-scroll gap-6 hover:[animation-play-state:paused]">
+      <section className="py-16">
+        <div ref={scrollRef} className="flex gap-6 overflow-x-auto pb-4 scrollbar-hide">
           {doubledScreenshots.map((s, i) => (
             <div key={`${s.file}-${i}`} className="w-[260px] flex-shrink-0">
               <img
