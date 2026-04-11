@@ -53,7 +53,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
           remarkPlugins={[remarkGfm]}
           components={{
             h2: ({ children }) => (
-              <h2 className="mt-12 mb-6 border-b border-zinc-700 pb-2 bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
+              <h2 className="mt-12 mb-6 border-b border-zinc-700 pb-2 text-zinc-200">
                 {children}
               </h2>
             ),
