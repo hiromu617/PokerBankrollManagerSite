@@ -65,6 +65,16 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Blog Link */}
+      <div className="px-4 pt-4">
+        <a
+          href={`/${language}/blog`}
+          className="text-sm text-zinc-400 transition hover:text-zinc-200"
+        >
+          {t.blog.heading} &rarr;
+        </a>
+      </div>
+
       {/* Hero */}
       <section className="flex flex-col items-center justify-center gap-6 px-4 py-24 text-center">
         <img
