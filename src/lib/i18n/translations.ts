@@ -25,7 +25,7 @@ export type Translations = {
   };
   footer: { privacyPolicy: string; termsOfService: string; blog: string };
   legal: { backToHome: string };
-  blog: { heading: string; backToBlog: string; backToHome: string };
+  blog: { heading: string; backToBlog: string; backToHome: string; viewAll: string };
 };
 
 const translations: Record<Language, Translations> = {
@@ -81,6 +81,7 @@ const translations: Record<Language, Translations> = {
       heading: "ブログ",
       backToBlog: "ブログ一覧に戻る",
       backToHome: "ホームに戻る",
+      viewAll: "すべての記事を見る",
     },
   },
   en: {
@@ -138,6 +139,7 @@ const translations: Record<Language, Translations> = {
       heading: "Blog",
       backToBlog: "Back to Blog",
       backToHome: "Back to Home",
+      viewAll: "View all posts",
     },
   },
   fr: {
@@ -195,6 +197,7 @@ const translations: Record<Language, Translations> = {
       heading: "Blog",
       backToBlog: "Retour au blog",
       backToHome: "Retour à l'accueil",
+      viewAll: "Voir tous les articles",
     },
   },
   es: {
@@ -252,6 +255,7 @@ const translations: Record<Language, Translations> = {
       heading: "Blog",
       backToBlog: "Volver al blog",
       backToHome: "Volver al inicio",
+      viewAll: "Ver todos los articulos",
     },
   },
   de: {
@@ -309,6 +313,7 @@ const translations: Record<Language, Translations> = {
       heading: "Blog",
       backToBlog: "Zurück zum Blog",
       backToHome: "Zurück zur Startseite",
+      viewAll: "Alle Beitrage anzeigen",
     },
   },
   pt: {
@@ -366,6 +371,7 @@ const translations: Record<Language, Translations> = {
       heading: "Blog",
       backToBlog: "Voltar ao blog",
       backToHome: "Voltar ao Início",
+      viewAll: "Ver todos os artigos",
     },
   },
   "zh-CN": {
@@ -423,6 +429,7 @@ const translations: Record<Language, Translations> = {
       heading: "博客",
       backToBlog: "返回博客列表",
       backToHome: "返回首页",
+      viewAll: "查看所有文章",
     },
   },
   "zh-TW": {
@@ -480,6 +487,7 @@ const translations: Record<Language, Translations> = {
       heading: "部落格",
       backToBlog: "返回部落格列表",
       backToHome: "返回首頁",
+      viewAll: "查看所有文章",
     },
   },
   ko: {
@@ -537,6 +545,7 @@ const translations: Record<Language, Translations> = {
       heading: "블로그",
       backToBlog: "블로그 목록으로 돌아가기",
       backToHome: "홈으로 돌아가기",
+      viewAll: "모든 글 보기",
     },
   },
 };
