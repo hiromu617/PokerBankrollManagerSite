@@ -43,7 +43,7 @@ export default function LanguageSwitcher() {
         <span>{current.label}</span>
       </button>
       {open && (
-        <ul className="absolute right-0 mt-1 overflow-hidden rounded-lg border border-zinc-700 bg-zinc-900 shadow-lg">
+        <ul className="absolute right-0 mt-1 overflow-hidden whitespace-nowrap rounded-lg border border-zinc-700 bg-zinc-900 shadow-lg">
           {languageOptions.map((opt) => (
             <li key={opt.code}>
               <button
