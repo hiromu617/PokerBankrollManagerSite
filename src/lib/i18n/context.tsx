@@ -9,7 +9,7 @@ import {
 } from "react";
 import { type Language, type Translations, getTranslations } from "./translations";
 
-const LANGUAGES: Language[] = ["ja", "en", "fr", "es", "de"];
+const LANGUAGES: Language[] = ["ja", "en", "fr", "es", "de", "pt", "zh-CN", "zh-TW", "ko"];
 
 type LanguageContextValue = {
   language: Language;
@@ -34,10 +34,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       return;
     }
     const browserLang = navigator.language;
+    if (isLanguage(browserLang)) {
+      setLanguageState(browserLang);
+      document.documentElement.lang = browserLang;
+      return;
+    }
     const prefix = browserLang.split("-")[0];
-    if (isLanguage(prefix)) {
-      setLanguageState(prefix);
-      document.documentElement.lang = prefix;
+    // Default bare "zh" to Simplified Chinese
+    const mapped = prefix === "zh" ? "zh-CN" : prefix;
+    if (isLanguage(mapped)) {
+      setLanguageState(mapped);
+      document.documentElement.lang = mapped;
     }
   }, []);
 

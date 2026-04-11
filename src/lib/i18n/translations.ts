@@ -1,4 +1,4 @@
-export type Language = "ja" | "en" | "fr" | "es" | "de";
+export type Language = "ja" | "en" | "fr" | "es" | "de" | "pt" | "zh-CN" | "zh-TW" | "ko";
 
 type FeatureEntry = {
   title: string;
@@ -278,6 +278,210 @@ const translations: Record<Language, Translations> = {
     },
     legal: {
       backToHome: "Zurück zur Startseite",
+    },
+  },
+  pt: {
+    hero: {
+      subtitle: "Gestão inteligente de bankroll para poker",
+      download: "Baixar na App Store",
+    },
+    features: {
+      heading: "Funcionalidades",
+      sessionRecording: {
+        title: "Registro de Sessões",
+        description:
+          "Registre os resultados das suas sessões de poker em tempo real. Compatível com cash games e MTT.",
+      },
+      bankrollManagement: {
+        title: "Gestão de Bankroll",
+        description:
+          "Visualize as tendências do seu bankroll em várias moedas com gráficos.",
+      },
+      detailedAnalysis: {
+        title: "Análise Detalhada",
+        description:
+          "Melhore sua estratégia com análises de lucros e perdas por stakes, local e período.",
+      },
+      handHistory: {
+        title: "Histórico de Mãos",
+        description: "Registre as mãos importantes durante as sessões. Salve as ações do preflop ao river.",
+      },
+      tripManagement: {
+        title: "Gestão de Viagens (Pro)",
+        description: "Acompanhe lucros e despesas por viagem ou série de torneios.",
+      },
+      dataExport: {
+        title: "Exportação de Dados",
+        description:
+          "Exporte em CSV para integração com ferramentas externas.",
+      },
+    },
+    screenshots: {
+      dashboard: "Painel (Tendência do Bankroll)",
+      analysis: "Análise (Calendário)",
+      liveSession: "Sessão ao Vivo",
+      bankroll: "Detalhes do Bankroll (Saques)",
+      handHistory: "Histórico de Mãos",
+    },
+    footer: {
+      privacyPolicy: "Política de Privacidade",
+      termsOfService: "Termos de Serviço",
+    },
+    legal: {
+      backToHome: "Voltar ao Início",
+    },
+  },
+  "zh-CN": {
+    hero: {
+      subtitle: "智能管理你的扑克资金",
+      download: "在 App Store 下载",
+    },
+    features: {
+      heading: "功能",
+      sessionRecording: {
+        title: "牌局记录",
+        description:
+          "实时记录扑克牌局结果。支持现金桌和MTT锦标赛。",
+      },
+      bankrollManagement: {
+        title: "资金管理",
+        description:
+          "通过图表可视化多币种资金走势。",
+      },
+      detailedAnalysis: {
+        title: "详细分析",
+        description:
+          "按级别、场地和时间段分析盈亏，优化你的策略。",
+      },
+      handHistory: {
+        title: "手牌记录",
+        description: "记录牌局中的关键手牌。保存从翻牌前到河牌的所有操作。",
+      },
+      tripManagement: {
+        title: "行程管理（Pro）",
+        description: "按行程或锦标赛系列统一管理收益和支出。",
+      },
+      dataExport: {
+        title: "数据导出",
+        description:
+          "导出CSV文件，与外部工具集成。",
+      },
+    },
+    screenshots: {
+      dashboard: "仪表盘（资金走势）",
+      analysis: "分析（日历）",
+      liveSession: "实时牌局记录",
+      bankroll: "资金详情（提款）",
+      handHistory: "手牌记录",
+    },
+    footer: {
+      privacyPolicy: "隐私政策",
+      termsOfService: "服务条款",
+    },
+    legal: {
+      backToHome: "返回首页",
+    },
+  },
+  "zh-TW": {
+    hero: {
+      subtitle: "智慧管理你的撲克資金",
+      download: "在 App Store 下載",
+    },
+    features: {
+      heading: "功能",
+      sessionRecording: {
+        title: "牌局記錄",
+        description:
+          "即時記錄撲克牌局結果。支援現金桌和MTT錦標賽。",
+      },
+      bankrollManagement: {
+        title: "資金管理",
+        description:
+          "透過圖表視覺化多幣種資金走勢。",
+      },
+      detailedAnalysis: {
+        title: "詳細分析",
+        description:
+          "按級別、場地和時間段分析盈虧，優化你的策略。",
+      },
+      handHistory: {
+        title: "手牌記錄",
+        description: "記錄牌局中的關鍵手牌。儲存從翻牌前到河牌的所有操作。",
+      },
+      tripManagement: {
+        title: "行程管理（Pro）",
+        description: "按行程或錦標賽系列統一管理收益和支出。",
+      },
+      dataExport: {
+        title: "資料匯出",
+        description:
+          "匯出CSV檔案，與外部工具整合。",
+      },
+    },
+    screenshots: {
+      dashboard: "儀表板（資金走勢）",
+      analysis: "分析（日曆）",
+      liveSession: "即時牌局記錄",
+      bankroll: "資金詳情（提款）",
+      handHistory: "手牌記錄",
+    },
+    footer: {
+      privacyPolicy: "隱私權政策",
+      termsOfService: "服務條款",
+    },
+    legal: {
+      backToHome: "返回首頁",
+    },
+  },
+  ko: {
+    hero: {
+      subtitle: "포커 뱅크롤을 스마트하게 관리",
+      download: "App Store에서 다운로드",
+    },
+    features: {
+      heading: "기능",
+      sessionRecording: {
+        title: "세션 기록",
+        description:
+          "포커 세션 결과를 실시간으로 기록. 캐시 게임과 MTT를 지원합니다.",
+      },
+      bankrollManagement: {
+        title: "뱅크롤 관리",
+        description:
+          "차트로 다양한 통화의 뱅크롤 추이를 시각화합니다.",
+      },
+      detailedAnalysis: {
+        title: "상세 분석",
+        description:
+          "스테이크, 장소, 기간별 손익 분석으로 전략을 개선하세요.",
+      },
+      handHistory: {
+        title: "핸드 기록",
+        description: "세션 중 주요 핸드를 기록. 프리플랍부터 리버까지 액션을 저장합니다.",
+      },
+      tripManagement: {
+        title: "트립 관리 (Pro)",
+        description: "여행 또는 토너먼트 시리즈별로 수익과 경비를 관리합니다.",
+      },
+      dataExport: {
+        title: "데이터 내보내기",
+        description:
+          "CSV로 내보내 외부 도구와 연동할 수 있습니다.",
+      },
+    },
+    screenshots: {
+      dashboard: "대시보드 (뱅크롤 추이)",
+      analysis: "분석 (캘린더)",
+      liveSession: "라이브 세션 기록",
+      bankroll: "뱅크롤 상세 (출금)",
+      handHistory: "핸드 기록",
+    },
+    footer: {
+      privacyPolicy: "개인정보 처리방침",
+      termsOfService: "이용약관",
+    },
+    legal: {
+      backToHome: "홈으로 돌아가기",
     },
   },
 };

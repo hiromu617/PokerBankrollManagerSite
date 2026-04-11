@@ -10,6 +10,10 @@ const languageOptions: { code: Language; flag: string; label: string }[] = [
   { code: "fr", flag: "🇫🇷", label: "FR" },
   { code: "es", flag: "🇪🇸", label: "ES" },
   { code: "de", flag: "🇩🇪", label: "DE" },
+  { code: "pt", flag: "🇧🇷", label: "PT" },
+  { code: "zh-CN", flag: "🇨🇳", label: "简中" },
+  { code: "zh-TW", flag: "🇹🇼", label: "繁中" },
+  { code: "ko", flag: "🇰🇷", label: "KO" },
 ];
 
 export default function LanguageSwitcher() {

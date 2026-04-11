@@ -108,9 +108,6 @@ export default function Home() {
                 alt={t.screenshots[s.key]}
                 className="w-full rounded-2xl border border-zinc-800 shadow-lg shadow-black/30"
               />
-              <p className="mt-3 text-center text-sm text-zinc-400">
-                {t.screenshots[s.key]}
-              </p>
             </div>
           ))}
         </div>
