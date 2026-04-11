@@ -3,13 +3,11 @@
 import {
   createContext,
   useContext,
-  useState,
   useEffect,
   type ReactNode,
 } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { type Language, type Translations, getTranslations } from "./translations";
-
-const LANGUAGES: Language[] = ["ja", "en", "fr", "es", "de", "pt", "zh-CN", "zh-TW", "ko"];
 
 type LanguageContextValue = {
   language: Language;
@@ -19,45 +17,32 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-function isLanguage(value: string): value is Language {
-  return LANGUAGES.includes(value as Language);
-}
+export function LanguageProvider({
+  lang,
+  children,
+}: {
+  lang: Language;
+  children: ReactNode;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("en");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("language");
-    if (saved && isLanguage(saved)) {
-      setLanguageState(saved);
-      document.documentElement.lang = saved;
-      return;
-    }
-    const browserLang = navigator.language;
-    if (isLanguage(browserLang)) {
-      setLanguageState(browserLang);
-      document.documentElement.lang = browserLang;
-      return;
-    }
-    const prefix = browserLang.split("-")[0];
-    // Default bare "zh" to Simplified Chinese
-    const mapped = prefix === "zh" ? "zh-CN" : prefix;
-    if (isLanguage(mapped)) {
-      setLanguageState(mapped);
-      document.documentElement.lang = mapped;
-    }
-  }, []);
-
-  const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
-    localStorage.setItem("language", lang);
-    document.documentElement.lang = lang;
+  const setLanguage = (newLang: Language) => {
+    localStorage.setItem("language", newLang);
+    const segments = pathname.split("/");
+    segments[1] = newLang;
+    router.push(segments.join("/"));
   };
 
-  const t = getTranslations(language);
+  useEffect(() => {
+    document.documentElement.lang = lang;
+    localStorage.setItem("language", lang);
+  }, [lang]);
+
+  const t = getTranslations(lang);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t }}>
+    <LanguageContext.Provider value={{ language: lang, setLanguage, t }}>
       {children}
     </LanguageContext.Provider>
   );

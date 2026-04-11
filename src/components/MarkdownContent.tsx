@@ -16,7 +16,7 @@ export default function MarkdownContent({ contentJa, contentEn }: Props) {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16">
       <Link
-        href="/"
+        href={`/${language}/`}
         className="mb-8 inline-flex items-center gap-1 text-sm text-zinc-400 transition hover:text-zinc-200"
       >
         &larr; {t.legal.backToHome}

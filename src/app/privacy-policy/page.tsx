@@ -1,23 +1,16 @@
-import fs from "fs";
-import path from "path";
-import type { Metadata } from "next";
-import MarkdownContent from "@/components/MarkdownContent";
+"use client";
 
-export const metadata: Metadata = {
-  title: "プライバシーポリシー - Poker Bankroll Manager",
-  description:
-    "Poker Bankroll Managerのプライバシーポリシーについて説明します。",
-};
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { detectLanguage } from "@/lib/i18n/detectLanguage";
 
-export default function PrivacyPolicyPage() {
-  const contentJa = fs.readFileSync(
-    path.join(process.cwd(), "content", "privacy-policy.md"),
-    "utf-8"
-  );
-  const contentEn = fs.readFileSync(
-    path.join(process.cwd(), "content", "privacy-policy.en.md"),
-    "utf-8"
-  );
+export default function PrivacyPolicyRedirect() {
+  const router = useRouter();
 
-  return <MarkdownContent contentJa={contentJa} contentEn={contentEn} />;
+  useEffect(() => {
+    const lang = detectLanguage();
+    router.replace(`/${lang}/privacy-policy`);
+  }, [router]);
+
+  return null;
 }
