@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 import { useLanguage } from "@/lib/i18n/context";
 import type { BlogPost } from "@/lib/blog";
 
@@ -35,7 +36,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
         </h1>
       </header>
       <article className="prose prose-invert prose-zinc max-w-none">
-        <Markdown>{post.content}</Markdown>
+        <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
       </article>
     </div>
   );
