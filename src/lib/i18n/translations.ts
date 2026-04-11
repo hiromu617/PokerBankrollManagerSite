@@ -23,8 +23,9 @@ export type Translations = {
     bankroll: string;
     handHistory: string;
   };
-  footer: { privacyPolicy: string; termsOfService: string };
+  footer: { privacyPolicy: string; termsOfService: string; blog: string };
   legal: { backToHome: string };
+  blog: { heading: string; backToBlog: string; backToHome: string };
 };
 
 const translations: Record<Language, Translations> = {
@@ -71,8 +72,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "プライバシーポリシー",
       termsOfService: "利用規約",
+      blog: "ブログ",
     },
     legal: {
+      backToHome: "ホームに戻る",
+    },
+    blog: {
+      heading: "ブログ",
+      backToBlog: "ブログ一覧に戻る",
       backToHome: "ホームに戻る",
     },
   },
@@ -122,8 +129,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "Privacy Policy",
       termsOfService: "Terms of Service",
+      blog: "Blog",
     },
     legal: {
+      backToHome: "Back to Home",
+    },
+    blog: {
+      heading: "Blog",
+      backToBlog: "Back to Blog",
       backToHome: "Back to Home",
     },
   },
@@ -173,8 +186,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "Politique de confidentialité",
       termsOfService: "Conditions d'utilisation",
+      blog: "Blog",
     },
     legal: {
+      backToHome: "Retour à l'accueil",
+    },
+    blog: {
+      heading: "Blog",
+      backToBlog: "Retour au blog",
       backToHome: "Retour à l'accueil",
     },
   },
@@ -224,8 +243,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "Política de privacidad",
       termsOfService: "Términos de servicio",
+      blog: "Blog",
     },
     legal: {
+      backToHome: "Volver al inicio",
+    },
+    blog: {
+      heading: "Blog",
+      backToBlog: "Volver al blog",
       backToHome: "Volver al inicio",
     },
   },
@@ -275,8 +300,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "Datenschutzrichtlinie",
       termsOfService: "Nutzungsbedingungen",
+      blog: "Blog",
     },
     legal: {
+      backToHome: "Zurück zur Startseite",
+    },
+    blog: {
+      heading: "Blog",
+      backToBlog: "Zurück zum Blog",
       backToHome: "Zurück zur Startseite",
     },
   },
@@ -326,8 +357,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "Política de Privacidade",
       termsOfService: "Termos de Serviço",
+      blog: "Blog",
     },
     legal: {
+      backToHome: "Voltar ao Início",
+    },
+    blog: {
+      heading: "Blog",
+      backToBlog: "Voltar ao blog",
       backToHome: "Voltar ao Início",
     },
   },
@@ -377,8 +414,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "隐私政策",
       termsOfService: "服务条款",
+      blog: "博客",
     },
     legal: {
+      backToHome: "返回首页",
+    },
+    blog: {
+      heading: "博客",
+      backToBlog: "返回博客列表",
       backToHome: "返回首页",
     },
   },
@@ -428,8 +471,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "隱私權政策",
       termsOfService: "服務條款",
+      blog: "部落格",
     },
     legal: {
+      backToHome: "返回首頁",
+    },
+    blog: {
+      heading: "部落格",
+      backToBlog: "返回部落格列表",
       backToHome: "返回首頁",
     },
   },
@@ -479,8 +528,14 @@ const translations: Record<Language, Translations> = {
     footer: {
       privacyPolicy: "개인정보 처리방침",
       termsOfService: "이용약관",
+      blog: "블로그",
     },
     legal: {
+      backToHome: "홈으로 돌아가기",
+    },
+    blog: {
+      heading: "블로그",
+      backToBlog: "블로그 목록으로 돌아가기",
       backToHome: "홈으로 돌아가기",
     },
   },

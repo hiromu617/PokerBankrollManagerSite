@@ -1,0 +1,42 @@
+"use client";
+
+import Link from "next/link";
+import Markdown from "react-markdown";
+import { useLanguage } from "@/lib/i18n/context";
+import type { BlogPost } from "@/lib/blog";
+
+function formatDate(dateStr: string, language: string): string {
+  const date = new Date(dateStr);
+  const locale = language === "ja" ? "ja-JP" : language;
+  return date.toLocaleDateString(locale, {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
+export default function BlogPostContent({ post }: { post: BlogPost }) {
+  const { language, t } = useLanguage();
+
+  return (
+    <div className="mx-auto max-w-3xl px-4 py-16">
+      <Link
+        href={`/${language}/blog`}
+        className="mb-8 inline-flex items-center gap-1 text-sm text-zinc-400 transition hover:text-zinc-200"
+      >
+        &larr; {t.blog.backToBlog}
+      </Link>
+      <header className="mb-8">
+        <time className="text-sm text-zinc-500">
+          {formatDate(post.date, language)}
+        </time>
+        <h1 className="mt-2 text-3xl font-bold tracking-tight">
+          {post.title}
+        </h1>
+      </header>
+      <article className="prose prose-invert prose-zinc max-w-none">
+        <Markdown>{post.content}</Markdown>
+      </article>
+    </div>
+  );
+}
