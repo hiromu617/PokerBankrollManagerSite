@@ -25,7 +25,7 @@ export default function BlogList({ posts }: { posts: BlogPostMeta[] }) {
       >
         &larr; {t.blog.backToHome}
       </Link>
-      <h1 className="mb-10 text-3xl font-bold tracking-tight">
+      <h1 className="mb-10 text-3xl font-bold tracking-tight bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
         {t.blog.heading}
       </h1>
       <div className="flex flex-col gap-6">

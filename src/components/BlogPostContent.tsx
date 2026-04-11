@@ -32,7 +32,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
         <time className="text-sm text-zinc-500">
           {formatDate(post.date, language)}
         </time>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight">
+        <h1 className="mt-2 text-3xl font-bold tracking-tight bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
           {post.title}
         </h1>
       </header>
@@ -49,7 +49,33 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
         </div>
       )}
       <article className="prose prose-invert prose-zinc max-w-none">
-        <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
+        <Markdown
+          remarkPlugins={[remarkGfm]}
+          components={{
+            h1: ({ children }) => (
+              <h1 className="bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
+                {children}
+              </h1>
+            ),
+            h2: ({ children }) => (
+              <h2 className="bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
+                {children}
+              </h2>
+            ),
+            h3: ({ children }) => (
+              <h3 className="bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
+                {children}
+              </h3>
+            ),
+            h4: ({ children }) => (
+              <h4 className="bg-gradient-to-r from-[#3377F6] to-[#66AAFF] bg-clip-text text-transparent">
+                {children}
+              </h4>
+            ),
+          }}
+        >
+          {post.content}
+        </Markdown>
       </article>
     </div>
   );
