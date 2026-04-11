@@ -63,6 +63,7 @@ export function getAllPostsMeta(language: Language): BlogPostMeta[] {
         title: post.title,
         date: post.date,
         description: post.description,
+        thumbnail: post.thumbnail,
       });
     }
   }
