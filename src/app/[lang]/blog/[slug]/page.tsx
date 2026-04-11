@@ -26,6 +26,9 @@ export async function generateMetadata({
       description: post.description,
       type: "article",
       publishedTime: post.date,
+      ...(post.thumbnail && {
+        images: [{ url: post.thumbnail, width: 1200, height: 630 }],
+      }),
     },
   };
 }

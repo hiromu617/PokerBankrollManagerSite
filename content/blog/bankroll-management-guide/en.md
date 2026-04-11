@@ -2,6 +2,7 @@
 title: "The Complete Guide to Poker Bankroll Management"
 date: "2026-04-12"
 description: "Recommended buy-in counts for cash games and MTTs, when to move up or down in stakes, and the most common bankroll mistakes to avoid."
+thumbnail: "/blog/bankroll-management-guide/thumbnail.png"
 ---
 
 To win at poker over the long run, **bankroll management** is just as important as skill at the table.

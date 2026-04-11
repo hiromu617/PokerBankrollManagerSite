@@ -8,6 +8,7 @@ export type BlogPostMeta = {
   title: string;
   date: string;
   description: string;
+  thumbnail?: string;
 };
 
 export type BlogPost = BlogPostMeta & {
@@ -45,6 +46,7 @@ export function getPost(slug: string, language: Language): BlogPost | null {
     title: data.title ?? slug,
     date: data.date ?? "",
     description: data.description ?? "",
+    thumbnail: data.thumbnail,
     content,
   };
 }

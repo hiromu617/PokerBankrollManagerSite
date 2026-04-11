@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -35,6 +36,18 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
           {post.title}
         </h1>
       </header>
+      {post.thumbnail && (
+        <div className="mb-8 overflow-hidden rounded-lg">
+          <Image
+            src={post.thumbnail}
+            alt={post.title}
+            width={1200}
+            height={630}
+            className="w-full"
+            priority
+          />
+        </div>
+      )}
       <article className="prose prose-invert prose-zinc max-w-none">
         <Markdown remarkPlugins={[remarkGfm]}>{post.content}</Markdown>
       </article>

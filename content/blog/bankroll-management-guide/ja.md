@@ -2,6 +2,7 @@
 title: "ポーカーのバンクロール管理 完全ガイド"
 date: "2026-04-12"
 description: "キャッシュゲーム・MTTの推奨バイイン数、レートの上げ下げの基準、よくある失敗パターンまで解説します。"
+thumbnail: "/blog/bankroll-management-guide/thumbnail.png"
 ---
 
 ポーカーで長期的に勝ち続けるために、実力と同じくらい大事なのが**バンクロール管理**(Bankroll Management)です。
