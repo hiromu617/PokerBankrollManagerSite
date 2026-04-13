@@ -77,13 +77,19 @@ export default function HomePage({ recentPosts }: { recentPosts: BlogPostMeta[] 
 
   return (
     <div className="min-h-screen">
-      {/* Blog Link */}
-      <div className="px-4 pt-4">
+      {/* Top Links */}
+      <div className="flex gap-4 px-4 pt-4">
         <a
           href={`/${language}/blog`}
           className="text-sm text-zinc-400 transition hover:text-zinc-200"
         >
           {t.blog.heading} &rarr;
+        </a>
+        <a
+          href={`/${language}/faq`}
+          className="text-sm text-zinc-400 transition hover:text-zinc-200"
+        >
+          {t.faq.heading} &rarr;
         </a>
       </div>
 
@@ -208,6 +214,9 @@ export default function HomePage({ recentPosts }: { recentPosts: BlogPostMeta[] 
         <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6">
           <a href={`/${language}/blog`} className="hover:text-zinc-300 transition">
             {t.footer.blog}
+          </a>
+          <a href={`/${language}/faq`} className="hover:text-zinc-300 transition">
+            {t.footer.faq}
           </a>
           <a href={`/${language}/privacy-policy`} className="hover:text-zinc-300 transition">
             {t.footer.privacyPolicy}

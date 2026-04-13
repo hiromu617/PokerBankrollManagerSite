@@ -23,9 +23,10 @@ export type Translations = {
     bankroll: string;
     handHistory: string;
   };
-  footer: { privacyPolicy: string; termsOfService: string; blog: string };
+  footer: { privacyPolicy: string; termsOfService: string; blog: string; faq: string };
   legal: { backToHome: string };
   blog: { heading: string; backToBlog: string; backToHome: string; viewAll: string };
+  faq: { heading: string; backToFaq: string; backToHome: string; viewAll: string };
 };
 
 const translations: Record<Language, Translations> = {
@@ -73,6 +74,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "プライバシーポリシー",
       termsOfService: "利用規約",
       blog: "ブログ",
+      faq: "よくある質問",
     },
     legal: {
       backToHome: "ホームに戻る",
@@ -82,6 +84,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "ブログ一覧に戻る",
       backToHome: "ホームに戻る",
       viewAll: "すべての記事を見る",
+    },
+    faq: {
+      heading: "よくある質問",
+      backToFaq: "質問一覧に戻る",
+      backToHome: "ホームに戻る",
+      viewAll: "すべての質問を見る",
     },
   },
   en: {
@@ -131,6 +139,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "Privacy Policy",
       termsOfService: "Terms of Service",
       blog: "Blog",
+      faq: "FAQ",
     },
     legal: {
       backToHome: "Back to Home",
@@ -140,6 +149,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "Back to Blog",
       backToHome: "Back to Home",
       viewAll: "View all posts",
+    },
+    faq: {
+      heading: "FAQ",
+      backToFaq: "Back to FAQ",
+      backToHome: "Back to Home",
+      viewAll: "View all questions",
     },
   },
   fr: {
@@ -189,6 +204,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "Politique de confidentialité",
       termsOfService: "Conditions d'utilisation",
       blog: "Blog",
+      faq: "FAQ",
     },
     legal: {
       backToHome: "Retour à l'accueil",
@@ -198,6 +214,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "Retour au blog",
       backToHome: "Retour à l'accueil",
       viewAll: "Voir tous les articles",
+    },
+    faq: {
+      heading: "FAQ",
+      backToFaq: "Retour à la FAQ",
+      backToHome: "Retour à l'accueil",
+      viewAll: "Voir toutes les questions",
     },
   },
   es: {
@@ -247,6 +269,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "Política de privacidad",
       termsOfService: "Términos de servicio",
       blog: "Blog",
+      faq: "Preguntas frecuentes",
     },
     legal: {
       backToHome: "Volver al inicio",
@@ -256,6 +279,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "Volver al blog",
       backToHome: "Volver al inicio",
       viewAll: "Ver todos los articulos",
+    },
+    faq: {
+      heading: "Preguntas frecuentes",
+      backToFaq: "Volver a las preguntas frecuentes",
+      backToHome: "Volver al inicio",
+      viewAll: "Ver todas las preguntas",
     },
   },
   de: {
@@ -305,6 +334,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "Datenschutzrichtlinie",
       termsOfService: "Nutzungsbedingungen",
       blog: "Blog",
+      faq: "FAQ",
     },
     legal: {
       backToHome: "Zurück zur Startseite",
@@ -314,6 +344,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "Zurück zum Blog",
       backToHome: "Zurück zur Startseite",
       viewAll: "Alle Beitrage anzeigen",
+    },
+    faq: {
+      heading: "FAQ",
+      backToFaq: "Zurück zur FAQ",
+      backToHome: "Zurück zur Startseite",
+      viewAll: "Alle Fragen anzeigen",
     },
   },
   pt: {
@@ -363,6 +399,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "Política de Privacidade",
       termsOfService: "Termos de Serviço",
       blog: "Blog",
+      faq: "Perguntas frequentes",
     },
     legal: {
       backToHome: "Voltar ao Início",
@@ -372,6 +409,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "Voltar ao blog",
       backToHome: "Voltar ao Início",
       viewAll: "Ver todos os artigos",
+    },
+    faq: {
+      heading: "Perguntas frequentes",
+      backToFaq: "Voltar às perguntas frequentes",
+      backToHome: "Voltar ao Início",
+      viewAll: "Ver todas as perguntas",
     },
   },
   "zh-CN": {
@@ -421,6 +464,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "隐私政策",
       termsOfService: "服务条款",
       blog: "博客",
+      faq: "常见问题",
     },
     legal: {
       backToHome: "返回首页",
@@ -430,6 +474,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "返回博客列表",
       backToHome: "返回首页",
       viewAll: "查看所有文章",
+    },
+    faq: {
+      heading: "常见问题",
+      backToFaq: "返回常见问题列表",
+      backToHome: "返回首页",
+      viewAll: "查看所有问题",
     },
   },
   "zh-TW": {
@@ -479,6 +529,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "隱私權政策",
       termsOfService: "服務條款",
       blog: "部落格",
+      faq: "常見問題",
     },
     legal: {
       backToHome: "返回首頁",
@@ -488,6 +539,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "返回部落格列表",
       backToHome: "返回首頁",
       viewAll: "查看所有文章",
+    },
+    faq: {
+      heading: "常見問題",
+      backToFaq: "返回常見問題列表",
+      backToHome: "返回首頁",
+      viewAll: "查看所有問題",
     },
   },
   ko: {
@@ -537,6 +594,7 @@ const translations: Record<Language, Translations> = {
       privacyPolicy: "개인정보 처리방침",
       termsOfService: "이용약관",
       blog: "블로그",
+      faq: "자주 묻는 질문",
     },
     legal: {
       backToHome: "홈으로 돌아가기",
@@ -546,6 +604,12 @@ const translations: Record<Language, Translations> = {
       backToBlog: "블로그 목록으로 돌아가기",
       backToHome: "홈으로 돌아가기",
       viewAll: "모든 글 보기",
+    },
+    faq: {
+      heading: "자주 묻는 질문",
+      backToFaq: "질문 목록으로 돌아가기",
+      backToHome: "홈으로 돌아가기",
+      viewAll: "모든 질문 보기",
     },
   },
 };
