@@ -5,6 +5,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useLanguage } from "@/lib/i18n/context";
+import CodeBlock from "@/components/CodeBlock";
 import type { FaqItem } from "@/lib/faq";
 
 function formatDate(dateStr: string, language: string): string {
@@ -60,6 +61,7 @@ export default function FaqContent({ item }: { item: FaqItem }) {
                 {children}
               </h2>
             ),
+            pre: CodeBlock,
           }}
         >
           {item.content}

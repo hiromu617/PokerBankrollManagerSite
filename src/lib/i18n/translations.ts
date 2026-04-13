@@ -27,6 +27,7 @@ export type Translations = {
   legal: { backToHome: string };
   blog: { heading: string; backToBlog: string; backToHome: string; viewAll: string };
   faq: { heading: string; backToFaq: string; backToHome: string; viewAll: string };
+  common: { copy: string; copied: string };
 };
 
 const translations: Record<Language, Translations> = {
@@ -90,6 +91,10 @@ const translations: Record<Language, Translations> = {
       backToFaq: "質問一覧に戻る",
       backToHome: "ホームに戻る",
       viewAll: "すべての質問を見る",
+    },
+    common: {
+      copy: "コピー",
+      copied: "コピーしました",
     },
   },
   en: {
@@ -156,6 +161,10 @@ const translations: Record<Language, Translations> = {
       backToHome: "Back to Home",
       viewAll: "View all questions",
     },
+    common: {
+      copy: "Copy",
+      copied: "Copied",
+    },
   },
   fr: {
     hero: {
@@ -220,6 +229,10 @@ const translations: Record<Language, Translations> = {
       backToFaq: "Retour à la FAQ",
       backToHome: "Retour à l'accueil",
       viewAll: "Voir toutes les questions",
+    },
+    common: {
+      copy: "Copier",
+      copied: "Copié",
     },
   },
   es: {
@@ -286,6 +299,10 @@ const translations: Record<Language, Translations> = {
       backToHome: "Volver al inicio",
       viewAll: "Ver todas las preguntas",
     },
+    common: {
+      copy: "Copiar",
+      copied: "Copiado",
+    },
   },
   de: {
     hero: {
@@ -350,6 +367,10 @@ const translations: Record<Language, Translations> = {
       backToFaq: "Zurück zur FAQ",
       backToHome: "Zurück zur Startseite",
       viewAll: "Alle Fragen anzeigen",
+    },
+    common: {
+      copy: "Kopieren",
+      copied: "Kopiert",
     },
   },
   pt: {
@@ -416,6 +437,10 @@ const translations: Record<Language, Translations> = {
       backToHome: "Voltar ao Início",
       viewAll: "Ver todas as perguntas",
     },
+    common: {
+      copy: "Copiar",
+      copied: "Copiado",
+    },
   },
   "zh-CN": {
     hero: {
@@ -480,6 +505,10 @@ const translations: Record<Language, Translations> = {
       backToFaq: "返回常见问题列表",
       backToHome: "返回首页",
       viewAll: "查看所有问题",
+    },
+    common: {
+      copy: "复制",
+      copied: "已复制",
     },
   },
   "zh-TW": {
@@ -546,6 +575,10 @@ const translations: Record<Language, Translations> = {
       backToHome: "返回首頁",
       viewAll: "查看所有問題",
     },
+    common: {
+      copy: "複製",
+      copied: "已複製",
+    },
   },
   ko: {
     hero: {
@@ -610,6 +643,10 @@ const translations: Record<Language, Translations> = {
       backToFaq: "질문 목록으로 돌아가기",
       backToHome: "홈으로 돌아가기",
       viewAll: "모든 질문 보기",
+    },
+    common: {
+      copy: "복사",
+      copied: "복사됨",
     },
   },
 };

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { useLanguage } from "@/lib/i18n/context";
+import CodeBlock from "@/components/CodeBlock";
 import type { BlogPost } from "@/lib/blog";
 
 function formatDate(dateStr: string, language: string): string {
@@ -57,6 +58,7 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
                 {children}
               </h2>
             ),
+            pre: CodeBlock,
           }}
         >
           {post.content}
