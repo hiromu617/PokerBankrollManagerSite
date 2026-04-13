@@ -4,8 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeSlug from "rehype-slug";
 import { useLanguage } from "@/lib/i18n/context";
 import CodeBlock from "@/components/CodeBlock";
+import TableOfContents from "@/components/TableOfContents";
 import type { BlogPost } from "@/lib/blog";
 
 function formatDate(dateStr: string, language: string): string {
@@ -49,14 +51,24 @@ export default function BlogPostContent({ post }: { post: BlogPost }) {
           />
         </div>
       )}
+      <TableOfContents content={post.content} />
       <article className="prose prose-invert prose-zinc max-w-none">
         <Markdown
           remarkPlugins={[remarkGfm]}
+          rehypePlugins={[rehypeSlug]}
           components={{
-            h2: ({ children }) => (
-              <h2 className="mt-12 mb-6 border-b border-zinc-700 pb-2 text-zinc-200">
+            h2: ({ children, id }) => (
+              <h2
+                id={id}
+                className="mt-12 mb-6 scroll-mt-4 border-b border-zinc-700 pb-2 text-zinc-200"
+              >
                 {children}
               </h2>
+            ),
+            h3: ({ children, id }) => (
+              <h3 id={id} className="scroll-mt-4">
+                {children}
+              </h3>
             ),
             pre: CodeBlock,
           }}

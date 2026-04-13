@@ -27,7 +27,7 @@ export type Translations = {
   legal: { backToHome: string };
   blog: { heading: string; backToBlog: string; backToHome: string; viewAll: string };
   faq: { heading: string; backToFaq: string; backToHome: string; viewAll: string };
-  common: { copy: string; copied: string };
+  common: { copy: string; copied: string; tableOfContents: string };
 };
 
 const translations: Record<Language, Translations> = {
@@ -95,6 +95,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "コピー",
       copied: "コピーしました",
+      tableOfContents: "目次",
     },
   },
   en: {
@@ -164,6 +165,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "Copy",
       copied: "Copied",
+      tableOfContents: "Contents",
     },
   },
   fr: {
@@ -233,6 +235,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "Copier",
       copied: "Copié",
+      tableOfContents: "Sommaire",
     },
   },
   es: {
@@ -302,6 +305,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "Copiar",
       copied: "Copiado",
+      tableOfContents: "Contenido",
     },
   },
   de: {
@@ -371,6 +375,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "Kopieren",
       copied: "Kopiert",
+      tableOfContents: "Inhalt",
     },
   },
   pt: {
@@ -440,6 +445,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "Copiar",
       copied: "Copiado",
+      tableOfContents: "Sumário",
     },
   },
   "zh-CN": {
@@ -509,6 +515,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "复制",
       copied: "已复制",
+      tableOfContents: "目录",
     },
   },
   "zh-TW": {
@@ -578,6 +585,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "複製",
       copied: "已複製",
+      tableOfContents: "目錄",
     },
   },
   ko: {
@@ -647,6 +655,7 @@ const translations: Record<Language, Translations> = {
     common: {
       copy: "복사",
       copied: "복사됨",
+      tableOfContents: "목차",
     },
   },
 };
