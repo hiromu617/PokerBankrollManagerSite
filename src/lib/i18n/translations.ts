@@ -28,6 +28,15 @@ export type Translations = {
   blog: { heading: string; backToBlog: string; backToHome: string; viewAll: string };
   faq: { heading: string; backToFaq: string; backToHome: string; viewAll: string };
   common: { copy: string; copied: string; tableOfContents: string };
+  seo: {
+    siteDescription: string;
+    blogDescription: string;
+    faqDescription: string;
+    privacyTitle: string;
+    termsTitle: string;
+    notFoundTitle: string;
+    notFoundMessage: string;
+  };
 };
 
 const translations: Record<Language, Translations> = {
@@ -96,6 +105,17 @@ const translations: Record<Language, Translations> = {
       copy: "コピー",
       copied: "コピーしました",
       tableOfContents: "目次",
+    },
+    seo: {
+      siteDescription:
+        "ポーカーセッションの収支を記録・分析するiOSアプリ。バンクロール推移、損益チャート、時給計算、ハンド記録に対応。",
+      blogDescription:
+        "ポーカーのバンクロール管理、戦略、データ分析に関する記事。",
+      faqDescription: "Poker Bankroll Manager の使い方に関するよくある質問。",
+      privacyTitle: "プライバシーポリシー",
+      termsTitle: "利用規約",
+      notFoundTitle: "ページが見つかりません",
+      notFoundMessage: "お探しのページは存在しないか、移動した可能性があります。",
     },
   },
   en: {
@@ -167,6 +187,18 @@ const translations: Record<Language, Translations> = {
       copied: "Copied",
       tableOfContents: "Contents",
     },
+    seo: {
+      siteDescription:
+        "iOS app for tracking and analyzing poker session results. Bankroll trends, P&L charts, hourly rate, and hand history.",
+      blogDescription:
+        "Articles on poker bankroll management, strategy, and data-driven analysis.",
+      faqDescription:
+        "Frequently asked questions about using Poker Bankroll Manager.",
+      privacyTitle: "Privacy Policy",
+      termsTitle: "Terms of Service",
+      notFoundTitle: "Page Not Found",
+      notFoundMessage: "The page you are looking for does not exist or has moved.",
+    },
   },
   fr: {
     hero: {
@@ -236,6 +268,18 @@ const translations: Record<Language, Translations> = {
       copy: "Copier",
       copied: "Copié",
       tableOfContents: "Sommaire",
+    },
+    seo: {
+      siteDescription:
+        "Application iOS pour suivre et analyser les résultats de vos sessions de poker. Tendances du bankroll, graphiques P&L, taux horaire et historique des mains.",
+      blogDescription:
+        "Articles sur la gestion de bankroll, la stratégie et l'analyse de données au poker.",
+      faqDescription:
+        "Foire aux questions sur l'utilisation de Poker Bankroll Manager.",
+      privacyTitle: "Politique de confidentialité",
+      termsTitle: "Conditions d'utilisation",
+      notFoundTitle: "Page introuvable",
+      notFoundMessage: "La page que vous recherchez n'existe pas ou a été déplacée.",
     },
   },
   es: {
@@ -307,6 +351,18 @@ const translations: Record<Language, Translations> = {
       copied: "Copiado",
       tableOfContents: "Contenido",
     },
+    seo: {
+      siteDescription:
+        "Aplicación iOS para registrar y analizar los resultados de tus sesiones de póker. Tendencias del bankroll, gráficos P&L, tarifa por hora e historial de manos.",
+      blogDescription:
+        "Artículos sobre gestión de bankroll, estrategia y análisis de datos en el póker.",
+      faqDescription:
+        "Preguntas frecuentes sobre el uso de Poker Bankroll Manager.",
+      privacyTitle: "Política de privacidad",
+      termsTitle: "Términos de servicio",
+      notFoundTitle: "Página no encontrada",
+      notFoundMessage: "La página que buscas no existe o ha sido movida.",
+    },
   },
   de: {
     hero: {
@@ -376,6 +432,17 @@ const translations: Record<Language, Translations> = {
       copy: "Kopieren",
       copied: "Kopiert",
       tableOfContents: "Inhalt",
+    },
+    seo: {
+      siteDescription:
+        "iOS-App zum Erfassen und Analysieren von Poker-Sitzungsergebnissen. Bankroll-Trends, P&L-Diagramme, Stundenrate und Hand-Verlauf.",
+      blogDescription:
+        "Artikel zu Bankroll-Management, Strategie und Datenanalyse beim Poker.",
+      faqDescription: "Häufig gestellte Fragen zur Nutzung von Poker Bankroll Manager.",
+      privacyTitle: "Datenschutzrichtlinie",
+      termsTitle: "Nutzungsbedingungen",
+      notFoundTitle: "Seite nicht gefunden",
+      notFoundMessage: "Die gesuchte Seite existiert nicht oder wurde verschoben.",
     },
   },
   pt: {
@@ -447,6 +514,18 @@ const translations: Record<Language, Translations> = {
       copied: "Copiado",
       tableOfContents: "Sumário",
     },
+    seo: {
+      siteDescription:
+        "App iOS para registrar e analisar os resultados das suas sessões de poker. Tendências de bankroll, gráficos de lucros e perdas, taxa horária e histórico de mãos.",
+      blogDescription:
+        "Artigos sobre gestão de bankroll, estratégia e análise de dados no poker.",
+      faqDescription:
+        "Perguntas frequentes sobre o uso do Poker Bankroll Manager.",
+      privacyTitle: "Política de Privacidade",
+      termsTitle: "Termos de Serviço",
+      notFoundTitle: "Página não encontrada",
+      notFoundMessage: "A página que você está procurando não existe ou foi movida.",
+    },
   },
   "zh-CN": {
     hero: {
@@ -516,6 +595,16 @@ const translations: Record<Language, Translations> = {
       copy: "复制",
       copied: "已复制",
       tableOfContents: "目录",
+    },
+    seo: {
+      siteDescription:
+        "记录和分析扑克牌局结果的 iOS 应用。资金走势、盈亏图表、时薪计算和手牌记录。",
+      blogDescription: "关于扑克资金管理、策略和数据分析的文章。",
+      faqDescription: "关于使用 Poker Bankroll Manager 的常见问题。",
+      privacyTitle: "隐私政策",
+      termsTitle: "服务条款",
+      notFoundTitle: "页面未找到",
+      notFoundMessage: "您要查找的页面不存在或已移动。",
     },
   },
   "zh-TW": {
@@ -587,6 +676,16 @@ const translations: Record<Language, Translations> = {
       copied: "已複製",
       tableOfContents: "目錄",
     },
+    seo: {
+      siteDescription:
+        "記錄和分析撲克牌局結果的 iOS 應用。資金走勢、盈虧圖表、時薪計算和手牌記錄。",
+      blogDescription: "關於撲克資金管理、策略和資料分析的文章。",
+      faqDescription: "關於使用 Poker Bankroll Manager 的常見問題。",
+      privacyTitle: "隱私權政策",
+      termsTitle: "服務條款",
+      notFoundTitle: "找不到頁面",
+      notFoundMessage: "您要尋找的頁面不存在或已移動。",
+    },
   },
   ko: {
     hero: {
@@ -656,6 +755,16 @@ const translations: Record<Language, Translations> = {
       copy: "복사",
       copied: "복사됨",
       tableOfContents: "목차",
+    },
+    seo: {
+      siteDescription:
+        "포커 세션 결과를 기록하고 분석하는 iOS 앱. 뱅크롤 추이, 손익 차트, 시급 계산 및 핸드 기록을 지원합니다.",
+      blogDescription: "포커 뱅크롤 관리, 전략 및 데이터 분석에 관한 글.",
+      faqDescription: "Poker Bankroll Manager 사용에 관한 자주 묻는 질문.",
+      privacyTitle: "개인정보 처리방침",
+      termsTitle: "이용약관",
+      notFoundTitle: "페이지를 찾을 수 없습니다",
+      notFoundMessage: "찾으시는 페이지가 존재하지 않거나 이동되었습니다.",
     },
   },
 };
