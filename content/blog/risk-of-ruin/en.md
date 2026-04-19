@@ -66,8 +66,8 @@ Where:
 
 The thing to notice: **WR and BR are in the numerator, but σ² is in the denominator**. That means:
 
-- **Double your win rate → RoR drops quadratically** (exponential effect, huge)
-- **Double your bankroll → RoR drops quadratically**
+- **Double your win rate → new RoR is the old RoR squared** (e.g. 3% → 0.09% — a huge drop)
+- **Double your bankroll → new RoR is the old RoR squared** (same quadratic effect)
 - **Double your standard deviation → RoR explodes** (σ² is 4× larger)
 
 Three levers: raise your edge, build the roll, cut the variance. All three compound.
@@ -82,7 +82,7 @@ A $5/hr winner with σ = $150/hr and a $4,000 bankroll:
 
 - RoR ≈ exp(−2 × 5 × 4,000 / 150²) = exp(−1.78) ≈ **17%**
 
-Same stake, same variance — but **a win rate gap of $10/hr changes RoR by more than 500×**. This is why obsessing over win rate matters more than most players realize.
+Same stake, same variance — but **the combined effect of WR and bankroll swings RoR by more than 500×**. This is why obsessing over both win rate and roll size matters more than most players realize.
 
 ## How Much RoR Should You Accept
 
@@ -111,8 +111,8 @@ Typical live cash profiles from $1/$2 to $5/$10 (σ estimated as 10× hourly):
 |---|---|---|---|---|---|
 | $1/$2 NLH | $10/hr | $150/hr | $4,000 | 20 BI | ~3% |
 | $1/$2 NLH | $10/hr | $150/hr | $6,000 | 30 BI | ~0.5% |
-| $1/$3 NLH | $15/hr | $200/hr | $6,000 | 20 BI | ~10% |
-| $1/$3 NLH | $15/hr | $200/hr | $9,000 | 30 BI | ~2% |
+| $1/$3 NLH | $8/hr | $200/hr | $6,000 | 20 BI | ~9% |
+| $1/$3 NLH | $8/hr | $200/hr | $9,000 | 30 BI | ~3% |
 | $2/$5 NLH | $40/hr | $400/hr | $10,000 | 20 BI | ~1% |
 | $2/$5 NLH | $40/hr | $400/hr | $15,000 | 30 BI | ~0.1% |
 | $5/$10 NLH | $80/hr | $800/hr | $20,000 | 20 BI | ~1% |
@@ -121,7 +121,7 @@ Typical live cash profiles from $1/$2 to $5/$10 (σ estimated as 10× hourly):
 ### What The Table Reveals
 
 - **At a stake you truly beat, 20 BI can get you under 1% RoR.**
-- **$1/$3 is the sneaky one** — a $15/hr win rate with $200/hr variance is not a cushy profile; 30 BI matters here.
+- **$1/$3 is the sneaky one** — an $8/hr win rate with $200/hr variance is not a cushy profile; 30 BI matters here.
 - **$5/$10 looks safe on paper at 20 BI**, but that assumes an $80/hr edge holds up under real pressure. The moment your WR dips under stress, RoR balloons.
 
 This is the mathematical backing for "30 BI" as a rule of thumb for serious live players — not a magic number, but a decent proxy for most real profiles.
